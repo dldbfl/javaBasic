@@ -151,7 +151,6 @@ public class Exam02 {
 				[e. long - 0]
 				[f. String - ""]//기본값이 null
 				*/
-				//집에서 해봅시다(예시)
 		
 	}
 
