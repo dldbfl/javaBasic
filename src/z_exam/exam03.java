@@ -4,23 +4,22 @@ public class exam03 {
 
 	public static void main(String[] args) {
 		
-		/*
+		
 		int x = 2;
 		int y = 5;
-		char c = 'A'; // 'A'의 문자코드는 65
+		char c1 = 'A'; // 'A'의 문자코드는 65
 		System.out.println(1 + x << 33);
 		System.out.println(y >= 5 || x < 0 && x > 2);
 		System.out.println(y += 10 - x++);
 		System.out.println(x+=2);
-		System.out.println( !('A' <= c && c <='Z') );
-		System.out.println('C'-c);
+		System.out.println( !('A' <= c1 && c1 <='Z') );
+		System.out.println('C'-c1);
 		System.out.println('5'-'0');
-		System.out.println(c+1);
-		System.out.println(++c);
-		System.out.println(c++);
-		System.out.println(c);
-		*/
-		
+		System.out.println(c1+1);
+		System.out.println(++c1);
+		System.out.println(c1++);
+		System.out.println(c1);
+	
 		
 		/* 
 		 * [3-2] 아래의 코드는 사과를 담는데 필요한 바구니(버켓)의 수를 구하는 코드이다. 
@@ -31,7 +30,7 @@ public class exam03 {
 		
 		int numOfApples = 123; // 사과의 개수
 		int sizeOfBucket = 10; // 바구니의 크기(바구니에 담을 수 있는 사과의 개수)
-		int numOfBucket = ( (123 + 9) /10 ); // 모든 사과를 담는데 필요한 바구니의 수
+		int numOfBucket = ( numOfApples/sizeOfBucket+(numOfApples%sizeOfBucket>0?1:0) ); // 모든 사과를 담는데 필요한 바구니의 수
 		System.out.println("필요한 바구니의 수 :"+numOfBucket);
 	
 		/*
@@ -74,8 +73,8 @@ public class exam03 {
 		 *셋째자리에서 반올림해야한다.(Math.round()를 사용하지 않고 처리할 것)
 		 */
 
-		int fahrenheit = 100;
-		float celcius = ((int)((5/9f*(100-32))*100+0.5f)/100.0f);
+		int fahrenheit = 99;
+		float celcius = ((int)(5/9f*(99-32)*100+0.5f)/100.0f);
 		System.out.println("Fahrenheit:"+fahrenheit);
 		System.out.println("Celcius:"+celcius);
 		
@@ -104,7 +103,7 @@ public class exam03 {
 		char ch2 = 'z';
 		boolean b2 = ('a' <= ch2 && ch2 <= 'z' || 'A' <= ch2 && ch2 <= 'Z' || 
 				'1' <= ch2 && ch2 <= '9');
-		System.out.println(b2);
+		System.out.println("이건 대문자거나 소문자거나 숫자다 ->"+b2);
 		
 		//[3-10] 다음은 대문자를 소문자로 변경하는 코드인데, 문자 ch에 저장된 문자가 대문자
 		//		  인 경우에만 소문자로 변경한다. 문자코드는 소문자가 대문자보다 32만큼 더 크다. 예를
