@@ -8,7 +8,7 @@ public class love {
 
 		Scanner s = new Scanner(System.in);
 
-		String Q1 = "Q1.나는 금사빠다.";
+		String Q1 = "Q1.나는 금방 사랑에 빠진다.";
 		String Q2 = "Q2.연애할 때 끌려다니는 편이다.";
 		String Q3 = "Q3.데이트 코스는 미리 짜는 편이 좋다.";
 		String Q4 = "Q4.감정 기복이 크지 않다.";
@@ -22,6 +22,9 @@ public class love {
 		String B_type = "B타입입니다.";
 		String C_type = "C타입입니다.";
 		String D_type = "D타입입니다.";
+		
+		
+		
 
 		System.out.println(Q1 + "Y/N");
 		String A = s.nextLine();
