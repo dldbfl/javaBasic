@@ -29,8 +29,7 @@ public class baseball {
 				
 		do{ 
 			count++;
-			System.out.println();
-			System.out.println("숫자를 입력해주세요");
+			System.out.println("\n숫자를  입력해주세요");
 			input = s.nextInt();
 						
 			while(input != 0){
@@ -65,8 +64,7 @@ public class baseball {
 			out=0;
 					
 			} while(c!=q1||b!=q2||a!=q3);
-		System.out.println();
-		System.out.println(q1+""+q2+""+q3);
+		System.out.println("\n"+q1+""+q2+""+q3);
 		System.out.println("정답입니다.");
 		System.out.println("총 횟수는  "+count);
 	}
