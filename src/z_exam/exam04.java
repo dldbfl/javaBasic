@@ -12,8 +12,7 @@ public class exam04 {
 		 * 영문자(대문자 또는 소문자)일 때 true인 조건식 ('a' <= ch&& ch<='z') || ('A' <= ch &&
 		 * ch<='Z') 6. int형 변수 year가 400으로 나눠떨어지거나 또는 4로 나눠떨어지고 100으로 나눠떨어지지 않을
 		 * 때 true인 조건식 year%400 ==0 || year%4 == 0 && year%100 !=0 7. boolean형
-		 * 변수 powerOn가 false일 때 true인 조건식 // boolean powerOn = false; // if
-		 * (powerOn == false) System.out.println(powerOn); 8. 문자열 참조변수 str이
+		 * 변수 powerOn가 false일 때 true인 조건식 // if(!powerOn); 8. 문자열 참조변수 str이
 		 * “yes”일 때 true인 조건식
 		 */
 		// str.equals("yes")
@@ -23,7 +22,9 @@ public class exam04 {
 		/*
 		 * int x= 0; int sum = 0;
 		 * 
-		 * for(x=1; 0<x&&x<20;x++ ){ if(x%3!= 0 && x%2!=0) sum = sum+x;
+		 * for(x=1; 0<x&&x<20;x++ ){ 
+		 * 		if(x%3!= 0 && x%2!=0)
+		 * 			 sum = sum+x;
 		 * 
 		 * } System.out.println(sum);
 		 */
@@ -44,22 +45,37 @@ public class exam04 {
 /*		[4-4] 1+(-2)+3+(-4)+... 과 같은 식으로 계속 더해나갔을 때, 몇까지 더해야 총합이
 		100이상이 되는지 구하시오.*/
 		
-		/*int x= 1;
-		int y= -2;
-		int sum=0;
-		int num=0;
+		
+/*		int a=0;
+		int b=0;
  		
-		while(sum < 100) {
-			num++;
-			sum = sum+x;
-			x= x+2;
-			num++;
-			sum = sum+y;
-			y= y-2;
+		while(a < 100) {
+			++b;
+			if(b % 2 == 0)a-= b;
+			else a += b;
+			
 
-			System.out.println(sum);	
+			System.out.println(a);	
 		}
+		System.out.println(b);	
 		*/
+		
+		/*int sum =0;
+		int num = 0;
+		int s = 1;
+		
+		for(int i = 1; true; i++, s= -s){
+			num = i * s;
+			sum = sum+num;
+			if(sum == 100){
+				break;
+			}
+			
+		}
+		System.out.println(num);
+		System.out.println(sum);*/
+		
+		
 		
 		
 		/*[4-5] 다음의 for문을 while문으로 변경하시오.
@@ -73,25 +89,20 @@ public class exam04 {
 			}
 	*/
 		
+		
 		/*
-		int j=0;
 		int i=0;
-		
-		while(i<=10)i++;{
-			while(j<=i)j++;{
+		while(i<=10){
+			int j=0;
+			while(j<=i){
 				System.out.print("*");
+				j++;
 			}
 			System.out.println();
+			i++;
 		}		
-		
-		
-		for (int d = 1; d <= 10; d++) {
-			for (int f = 1; f <= d; f++) {
-				System.out.print("*");
-			}
-			System.out.println();
-			}
 		*/
+		
 		
 	/*[4-6] 두 개의 주사위를 던졌을 때, 눈의 합이 6이 되는 모든 경우의 수를 출력하는 프
 	로그램을 작성하시오.*/
@@ -113,6 +124,8 @@ public class exam04 {
 			System.out.println("value:"+value);
 			
 		}*/
+
+		//Math.random() : 0 ~ 1 미만 랜덤 수 발생
 		
 		/*[4-8] 방정식 2x+4y=10의 모든 해를 구하시오. 단, x와 y는 정수이고 각각의 범위는
 				0<=x<=10, 0<=y<=10 이다.*/
@@ -145,23 +158,26 @@ public class exam04 {
 
 			
 			System.out.println("sum="+sum);
-			
-		*/
+			*/
+		
 		
 		
 		/*[4-11] 피보나치(Fibonnaci) 수열(數列)은 앞을 두 수를 더해서 다음 수를 만들어 나가
 		는 수열이다. 예를 들어 앞의 두 수가 1과 1이라면 그 다음 수는 2가 되고 그 다음 수는
 		1과 2를 더해서 3이 되어서 1,1,2,3,5,8,13,21,... 과 같은 식으로 진행된다. 1과 1부터
-		시작하는 피보나치수열의 10번째 수는 무엇인지 계산하는 프로그램을 완성하시오.
-		*/
+		시작하는 피보나치수열의 10번째 수는 무엇인지 계산하는 프로그램을 완성하시오.*/
+		
 		
 		
 			// Fibonnaci 수열의 시작의 첫 두 숫자를 1, 1로 한다.
-			/*int num1 = 1;
+			
+			
+		/*	int num1 = 1;
 			int num2 = 1;
 			int num3 = 0; // 세번째 값
 			System.out.print(num1+","+num2);
 			for (int i = 0 ; i < 8 ; i++ ) {
+				
 				num3 = num1+num2;
 				
 				System.out.print("," + num3);
@@ -169,7 +185,10 @@ public class exam04 {
 				num2 = num3;
 				
 				
-			}*/
+			}
+			*/
+		
+		
 		
 		/*[4-14] 다음은 숫자맞추기 게임을 작성한 것이다. 1과 100사이의 값을 반복적으로 입력
 		해서 컴퓨터가 생각한 값을 맞추면 게임이 끝난다. 사용자가 값을 입력하면, 컴퓨터는 자
@@ -214,7 +233,17 @@ public class exam04 {
 		int tmp = number;
 		int result =0; // 변수 number를 거꾸로 변환해서 담을 변수
 		while(tmp !=0) {
+		
+		
+			/*result =result *10 +  tmp % 10;
+			tmp =tmp /10;
+			System.out.println(result+"값"+tmp);*/
 
+			//
+			
+		
+			result = result * 10 + tmp % 10;
+			tmp= tmp /10;		
 			
 
 			
@@ -223,6 +252,10 @@ public class exam04 {
 		System.out.println( number + "는 회문수 입니다.");
 		else
 		System.out.println( number + "는 회문수가 아닙니다.");
+		
+		
+	
+		
 		
 		
 	}
