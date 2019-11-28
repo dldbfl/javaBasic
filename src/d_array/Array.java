@@ -150,18 +150,12 @@ public class Array {
 		//1~10 사이의 난수를 500번 생성하고, 각 숫자가 생성된 횟수를 출력해주세요.
 				
 		int[] hard = new int[10];
-				
+		
 		for(int j = 1; j <= 500; j++){
 			int random2 = (int)(Math.random()*10)+1;
 			System.out.println(random2);
 			
-			for(int k = 1; k <= 10; k++){
-				if (random2!=1)hard[k]++;
-				else if (random2==10)hard[9]++;
-				else hard[0]++;
-				}
-						
-			if (random2==1)
+			/*if (random2==1)
 				 hard[0]++;
 			else if (random2==2)
 				 hard[1]++;
@@ -180,9 +174,17 @@ public class Array {
 			else if (random2==9)
 				 hard[8]++;
 			else if (random2==10)
-				 hard[9]++;
+				 hard[9]++;*/
+						
+			for(int c = 0; c < 10; c++){
+				if(random2==c+1){
+				hard[c]++;
+				}
 			}
+		}
+			
 		System.out.println(Arrays.toString(hard));
+					
 		sum = 0;
 		for(int i = 0; i< hard.length;i++){
 			sum += hard[i];
