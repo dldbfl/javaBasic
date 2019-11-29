@@ -31,9 +31,9 @@ public class Sort {
 		*/
 		/*bubbleSort(numbers); // 버블정렬
 		*/
-		insertSort(numbers); // 삽입정렬zZ
-		
-//		printRank(numbers); //등수구하기
+		/*insertSort(numbers); // 삽입정렬zZ
+	*/	
+		printRank(numbers); //등수구하기
 		
 		
 		
@@ -43,7 +43,11 @@ public class Sort {
 	
 	
 	private static void printRank(int[] numbers) {
-		int[] Rank = {1,1,1,1,1,1,1,1,1,1};
+		int[] Rank =  new int [numbers.length];
+		
+		for(int a=0; a < Rank.length;a++){
+			Rank[a] +=1;
+		}
 		
 		for(int j = 0; j < numbers.length; j++){
 			for(int i = 0; i < numbers.length; i++){
@@ -54,7 +58,9 @@ public class Sort {
 					}
 				}	
 			}
-		System.out.println(Arrays.toString(Rank));
+		for(int i = 0; i <numbers.length;i++){
+			System.out.println(numbers[i]+ " : " + Rank[i]+ "등");
+		}
 		
 		
 		
