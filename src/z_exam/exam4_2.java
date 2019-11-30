@@ -60,43 +60,37 @@ public class exam4_2 {
 		String input = s.nextLine();;
 		System.out.println(input); 
 		int temp = input.length();
-		String[] key = new String [temp]; 
+		int[] key = new int[temp+2];
 		
-		
-		
+		//이렇게 하면 for문이 적절할떄 끝나지않아요. 참고하세요.
 		for(int i = temp; i > 0; i-=3){
-			String sub = input.substring(temp-3,temp);
-			
-//			System.out.print(sub);
-//			System.out.print(',');
-			
-			
-			
-			
-			/*
-			for(int j = temp; j > 0; j-3){
-				
-				key[temp/3-j] = sub;
-				key[temp/3-j-1] = ",";
-				
-				if (temp/3==2 || temp/3 == 1 ) j=0;
-				
-			}*/
-			
-			
-			
+			String sub = input.substring(0,temp-3);
+			String sub1 = input.substring(temp-3);
 			temp = temp-3;
+			input = sub+','+sub1;
 			if (temp==2 || temp == 1 ) i=0;
-									
-			}
-		
-		
-		System.out.println(key);
+			}System.out.println(input);
 		
 		
 		
-			
-
+		
+		//			이렇게하면 앞에서부터 3개씩 뽑아냄
+//		Scanner s = new Scanner(System.in);
+//		
+//		String input = s.nextLine();
+//		System.out.println(input); 
+//			
+//		for(int i = input.length()-3; i > 0; i-=3){
+//			String sub = input.substring(0,i);
+//			String sub1 = input.substring(i);
+//			input =sub+","+sub1;
+//			System.out.println(input);
+//			}
+		
+		
+//		int in = 123456789;
+//		System.out.printf("%,d", in);
+//		
+		
 	}
-
 }
