@@ -57,19 +57,22 @@ public class exam4_2 {
 		
 		Scanner s = new Scanner(System.in);
 		
-		String input = s.nextLine();;
-		System.out.println(input); 
-		int temp = input.length();
-		int[] key = new int[temp+2];
+		String number = s.nextLine();
+		System.out.println(number); 
+		String NewNumber = "";
+		
+		int count = 0;
+		
 		
 		//이렇게 하면 for문이 적절할떄 끝나지않아요. 참고하세요.
-		for(int i = temp; i > 0; i-=3){
-			String sub = input.substring(0,temp-3);
-			String sub1 = input.substring(temp-3);
-			temp = temp-3;
-			input = sub+','+sub1;
-			if (temp==2 || temp == 1 ) i=0;
-			}System.out.println(input);
+		for(int i = number.length()-1; i >= 0; i--){
+			newNumber = number.charAt(i) + newNumber;
+			count++;
+			if (count % 3 == 0 && count != number.length()){
+				newNumber = ","+newNumber;
+			}
+		}
+		System.out.println(newNumber);
 		
 		
 		
@@ -88,8 +91,13 @@ public class exam4_2 {
 //			}
 		
 		
-//		int in = 123456789;
-//		System.out.printf("%,d", in);
+		
+//		Scanner s = new Scanner(System.in);
+//		
+//		int input = Integer.parseInt(s.nextLine());
+//		System.out.println(input); 
+//		input = 102131232;
+//		System.out.printf("%,d", input);
 //		
 		
 	}

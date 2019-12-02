@@ -27,13 +27,13 @@ public class Sort {
 		suffle(numbers);
 		System.out.println(Arrays.toString(numbers));
 		
-		/*selectSoft(numbers); //선택정렬
-		*/
-		/*bubbleSort(numbers); // 버블정렬
-		*/
-		/*insertSort(numbers); // 삽입정렬zZ
-	*/	
-		printRank(numbers); //등수구하기
+		selectSoft(numbers); //선택정렬
+		
+//		bubbleSort(numbers); // 버블정렬
+	
+//		insertSort(numbers); // 삽입정렬zZ
+		
+//		printRank(numbers); //등수구하기
 		
 		
 		
@@ -123,10 +123,10 @@ public class Sort {
 					int temp = numbers[j];
 					numbers[j]=numbers[i];
 					numbers[i] = temp;
-					System.out.println(Arrays.toString(numbers));
+					
 					}
 				}
-			}
+			}System.out.println(Arrays.toString(numbers));
 		}
 	
 
