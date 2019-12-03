@@ -129,11 +129,6 @@ public class Score {
 			System.out.print(lastavg[j]+"\t");
 		}	
 		
-
-				
-		
-		
-			
 	}
 
 }
