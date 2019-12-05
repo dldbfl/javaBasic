@@ -1,5 +1,7 @@
 package e_oop;
 
+import java.util.Scanner;
+
 public class OOP {
 
 	public static void main(String[] args) {
@@ -33,5 +35,257 @@ public class OOP {
 			
 			sc.test1();
 			
+			//방금 만든 클래스의 객체를 생성하고 변수에 저장해주세요.
+			
+			ClassMaker cm = new ClassMaker();
+			
+			//객체가 저장된 변수를 통해 메서드들을 호출해주세요,
+			//파라미터가 있는 메서드는 타입에 맞는 값을 넘겨주시고,
+			//리턴타입이 있는 메서드는 리턴받은 값을 출력해주세요.
+			
+			cm.method1();
+			
+			int ds = cm.method2();
+			System.out.println(ds);
+			
+			
+		    cm.method3(3);
+			
+		 int method4 =cm.method4(3,5);
+		 System.out.println(method4);
+			
+		 //5개의 산술연산을 각각 수행하는 5개의 메서드를 만들어주세요.
+		 //각 메서드는 2개의 파라미터를 받아 연산결과를 리턴해주세요.
+		 
+		 //다음을 한줄씩 꼐산해서 최종 결과값을 출력해주세요.
+		 //1. 123456+ 654321
+		 //2. 1번의 결과값 *123456
+		 //3. 2번의 결과값 /123456
+		 //4. 3번의 결과값 - 654321
+		 //5. 4번의 결과값 % 123456
+		 
+		 
+		 Calculator as = new Calculator();
+		 
+		 int plus = as.plus(123456, 654321);
+		 System.out.println(plus);
+		 long multiplication = as.multiplication(plus, 123456);
+		 System.out.println(multiplication);
+		 long divide = as.divide(multiplication, 123456);
+		 System.out.println(divide);
+		 long minus = as.minus(divide, 654321);
+		 System.out.println(minus);
+		 long remainder = as.remainder(minus, 123456);
+		 
+		 System.out.println(remainder);
+			
+			
+			
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                      

@@ -102,10 +102,10 @@ public class exam5 {
 ////		한 만큼 가진 돈에서 빼고 남은 동전의 개수를 화면에 출력한다. (1)에 알맞은 코드를 넣
 ////		어서 프로그램을 완성하시오.
 //		
-////		if(args.length!=1) {
-////			System.out.println("USAGE: java Exercise5_7 3120");
-////			System.exit(0);
-////			}
+//		if(args.length!=1) {
+//			System.out.println("USAGE: java Exercise5_7 3120");
+//			System.exit(0);
+//			}
 //		// 문자열을 숫자로 변환한다. 입력한 값이 숫자가 아닐 경우 예외가 발생한다.
 //		
 //		Scanner s = new Scanner(System.in);
@@ -123,20 +123,15 @@ public class exam5 {
 //				coin[i] = coin[i]-coinNum;
 //			}
 //			else {
-//				coinNum=coin[i];
 //				
-//			}coin[i] = coin[i]-coinNum;
-//			
-//			
-//	
+//				coinNum=coin[i];
+//				coin[i] = coin[i]-coinNum;
+//			}
+//								
 //			money = money - coinNum*coinUnit[i];
 //			System.out.println(coinUnit[i]+"원: "+coinNum);
-//			
-//			
-//										
 //		}
-//			
-//		
+//					
 //		if(money > 0) {
 //		System.out.println("거스름돈이 부족합니다.");
 //		System.exit(0); // 프로그램을 종료한다.
@@ -222,9 +217,8 @@ public class exam5 {
 //				}else{
 //					result += numCode[ch - '0'];
 //				}
-//				
-//
 //		}
+		
 //		System.out.println("src:" + src);
 //		System.out.println("result:" + result);
 		
@@ -232,25 +226,28 @@ public class exam5 {
 //		의 행과 열의 마지막 요소에 각 열과 행의 총합을 저장하고 출력하는 프로그램이다. (1)
 //		에 알맞은 코드를 넣어서 완성하시오.
 		
-//		int[][] score = {
-//				{100, 100, 100}
-//				, {20, 20, 20}
-//				, {30, 30, 30}
-//				, {40, 40, 40}
-//				, {50, 50, 50}
-//				};
-//				int[][] result = new int[score.length+1][score[0].length+1];
-//					for(int i=0; i < score.length;i++) {
-//						for(int j=0; j < score[i].length;j++) {
-//				/*
-//				(1) 알맞은 코드를 넣어 완성하시오.
-//				*/ }
-//				}
-//				for(int i=0; i < result.length;i++) {
-//					for(int j=0; j < result[i].length;j++) {
-//						System.out.printf("%4d",result[i][j]);
-//					}System.out.println();
-		
+		int[][] score = {
+				{100, 100, 100}
+				, {20, 20, 20}
+				, {30, 30, 30}
+				, {40, 40, 40}
+				, {50, 50, 50}
+				};
+				int[][] result = new int[score.length+1][score[0].length+1];
+					for(int i=0; i < score.length;i++) {
+						for(int j=0; j < score[i].length;j++) {
+							result[i][j] = score[i][j];
+							result[i][result[1].length - 1] += score[i][j];
+							result[result.length-1][j] += score[i][j];
+						}
+					result[result.length-1][result[i].length-1] += result[i][result[i].length-1];									
+							
+				}
+				for(int i=0; i < result.length;i++) {
+					for(int j=0; j < result[i].length;j++) {
+						System.out.printf("%4d",result[i][j]);
+					}System.out.println();
+				}
 //		[5-12] 예제5-23을 변경하여, 아래와 같은 결과가 나오도록 하시오.
 //		
 //		[실행결과]
