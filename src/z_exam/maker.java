@@ -4,20 +4,19 @@ import java.util.Scanner;
 
 public class maker {
 	
-	int Str, Int, Dex, Luc;
-		
+	int Str, Int;
+	
 	
 	maker(){
 		Str = (int) (Math.random()*10+1);
 		Int = (int) (Math.random()*10+1);
-		Dex = (int) (Math.random()*10+1);
-		Luc = (int) (Math.random()*10+1);
+	
 	}
 	
 	void state(){
-		
-		System.out.print("체력. ");
-		for(int i =  1; i <= 10; i++){
+		System.out.println();
+		System.out.print("\t"+"먹이 : ");
+		for(int i =  1; i <= 15; i++){
 			if(i <= Str){
 				System.out.print("■");
 			}else{
@@ -25,100 +24,138 @@ public class maker {
 			}
 		}
 		System.out.println();
-		System.out.print("지능. ");
-		for(int i =  1; i <= 10; i++){
+		System.out.print("\t"+"행복 : ");
+		for(int i =  1; i <= 15; i++){
 			if(i <= Int){
 				System.out.print("■");
 			}else{
 				System.out.print("□");
 			}
 		}
-		System.out.println();
-		System.out.print("민첩. ");
-		for(int i =  1; i <= 10; i++){
-			if(i <= Dex){
-				System.out.print("■");
-			}else{
-				System.out.print("□");
-			}
-		}
-		System.out.println();
-		System.out.print("행운. ");
-		for(int i =  1; i <= 10; i++){
-			if(i <= Luc){
-				System.out.print("■");
-			}else{
-				System.out.print("□");
-			}
-		}
 	}
 	
-	void disease(){
-		String disease[]= {"복통","두통","과제","탈진","코피","졸음"};
-		for(int i = 0; i < disease.length * 10; i++){
-			int random = (int)(Math.random()*disease.length);
-			String temp = disease[0];
-			disease[0] = disease[random];
-			disease[random] = temp;
-			
+	int food(){
+		String food[]= {"초콜릿","강아지사료","커피","참치캔","계란","닭가슴살","소고기"};
+		for(int i = 0; i < food.length * 10; i++){
+			int random = (int)(Math.random()*food.length);
+			String temp = food[0];
+			food[0] = food[random];
+			food[random] = temp;
 		}
-		System.out.println(disease);
-		if(disease.equals("복통")){
-			Str = Str-2;
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println("\t"+"\t"+"\t"+food[0]);
+		if(food[0].equals("초콜릿")){
+			Str = Str-3;
+			badcat();
 		}
-		else if(disease.equals("두통")){
-			Int = Int-2;
+		else if(food[0].equals("강아지사료")){
+			Str = Str-3;
+			badcat();
 		}
-		else if(disease.equals("과제")){
-			Int = Int+1;
+		else if(food[0].equals("커피")){
+			Str=Str-3;
+			badcat();
 		}
-		else if(disease.equals("탈진")){
-			Str = Str-1;
-		}
-		else if(disease.equals("코피")){
-			Dex = Dex-1;
-			Str = Str-1;
-		}
-		else if(disease.equals("졸음")){
-			Str = Str-2;
-			Dex = Dex-2;
-			Int = Int-2;
-			
-		}
-		
-	}
-	
-	void lucky(){
-		String lucky[]= {"축복","물주기","쓰다듬기","칭찬","광합성"};
-		for(int i = 0; i < lucky.length * 10; i++){
-			int random = (int)(Math.random()*lucky.length);
-			String temp = lucky[0];
-			lucky[0] = lucky[random];
-			lucky[random] = temp;
-			
-		}
-		System.out.println(lucky);
-		if(lucky.equals("축복")){
+		else if(food[0].equals("참치캔")){
 			Str = Str+2;
+			goodcat();
 		}
-		else if(lucky.equals("물주기")){
-			Int = Int-2;
+		else if(food[0].equals("계란")){
+			Str = Str+2;
+			goodcat();
 		}
-		else if(lucky.equals("쓰다듬기")){
-			Int = Int+1;
+		else if(food[0].equals("닭가슴살")){
+			Str = Str+2;
+			goodcat();
 		}
-		else if(lucky.equals("칭찬")){
-			Str = Str-1;
+		else if(food[0].equals("소고기")){
+			Str = Str+2;
+			goodcat();
 		}
-		else if(lucky.equals("광합성")){
-			Dex = Dex-1;
-			Str = Str-1;
+	
+		if(Str>15){
+			Str=15;
 		}
-		
+				
+		return Str;
 	}
 	
-	String coin(){
-		String coin[]= {"앞면","뒷면"};
+	int play(){
+		String play[]= {"쓰다듬기","간지럽히기","찌르기","산책","목욕","같이잠자기","레이저포인트","스크래쳐","깃털낚시"};
+		for(int i = 0; i < play.length * 10; i++){
+			int random = (int)(Math.random()*play.length);
+			String temp = play[0];
+			play[0] = play[random];
+			play[random] = temp;
+		}
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println("\t"+"\t"+"\t"+play[0]);
+		if(play[0].equals("쓰다듬기")){
+			Int = Int+1;
+			goodcat();
+		}
+		else if(play[0].equals("간지럽히기")){
+			Int = Int-2;
+			badcat();
+		}
+		else if(play[0].equals("찌르기")){
+			Int = Int-2;
+			badcat();
+		}
+		else if(play[0].equals("산책")){
+			Int = Int-2;
+			badcat();
+		}
+		else if(play[0].equals("목욕")){
+			Int= Int-2;
+			badcat();
+		}
+		else if(play[0].equals("같이잠자기")){
+			Int = Int+2;
+			goodcat();
+		}
+		else if(play[0].equals("레이저포인트")){
+			Int=Int+2;
+			goodcat();
+		}
+		else if(play[0].equals("스크래쳐")){
+			Int = Int+2;
+			goodcat();
+		}
+		else if(play[0].equals("깃털낚시")){
+			Int = Int+2;
+			goodcat();
+		}
+		
+		if(Int>15){
+			Int=15;
+		}
+		return Int;		
+	}
+			
+	int coin(){	
+		System.out.println("랜덤!");
+		String coin[]= {"먹이주기","놀아주기"};
 		for(int i = 0; i < coin.length * 10; i++){
 			int random = (int)(Math.random()*coin.length);
 			String temp = coin[0];
@@ -127,93 +164,162 @@ public class maker {
 			
 		}
 		System.out.println(coin[0]);
-		return coin[0];
-	
+		
+		
+		if (coin[0].equals("먹이주기")){
+			food();
+		}
+		else if (coin[0].equals("놀아주기")){
+			play();
+		}
+		return Int;
 	}
 			
+	void gameover(){
+		System.out.println("■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■");
+		System.out.println("■■□□□□□■□□□□□■□□■□□■□□□□□■■■■□□□□□■□■■■□■□□□□□■□□□□□■■");
+		System.out.println("■■□■■■■■□■■■□■□■□■□■□■■■■■■■■□■■■□■□■■■□■□■■■■■□■■■□■■");
+		System.out.println("■■□■□□□■□□□□□■□■□■□■□□□□□■■■■□■■■□■□■■■□■□□□□□■□□□□□■■");
+		System.out.println("■■□■■■□■□■■■□■□■□■□■□■■■■■■■■□■■■□■■□■□■■□■■■■■□■■□■■■");
+		System.out.println("■■□□□□□■□■■■□■□■□■□■□□□□□■■■■□□□□□■■■□■■■□□□□□■□■■■□■■");
+		System.out.println("■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■");
+	}		
+	
+	void babycat(){
+		
+		System.out.println("■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■");
+		System.out.println();
+		System.out.println("\t"+"\t"+"       "+"■      ■       ■■■");
+		System.out.println("\t"+"\t"+"     "+"■ ■    ■ ■     ■ ■");
+		System.out.println("\t"+"\t"+"   "+"■    ■ ■    ■    ■ ■");
+		System.out.println("\t"+"\t"+"  "+"■            ■    ■ ■");
+		System.out.println("\t"+"\t"+"  "+"■ ■■      ■■ ■    ■ ■");
+		System.out.println("\t"+"\t"+"  "+"■            ■     ■ ■");
+		System.out.println("\t"+"\t"+"    "+"■          ■  ■  ■ ■");
+		System.out.println("\t"+"\t"+"     "+"■                ■");
+		System.out.println("\t"+"\t"+"     "+"■ ■  ■  ■ ■   ■ ■");
+		System.out.println("\t"+"\t"+"     "+"■ ■ ■ ■     ■ ■ ■");
+		System.out.println();		
+		System.out.println("■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■");
+		
+
+	}
+	
+	void adultcat(){
+		System.out.println("축하합니다! 고양이가 잘 컸어요!");
+		System.out.println("■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■");
+		System.out.println();
+		System.out.println("\t"+"\t"+"       "+"■      ■       ■■■");
+		System.out.println("\t"+"\t"+"     "+"■ ■    ■ ■     ■ ■ ■ ■ ");
+		System.out.println("\t"+"\t"+"   "+"■   ■ ■ ■   ■    ■ ■   ■ ■ ");
+		System.out.println("\t"+"\t"+"  "+"■            ■    ■ ■  ■ ■ ");
+		System.out.println("\t"+"\t"+"  "+"■ ■■    ■■■   ■   ■ ■");
+		System.out.println("\t"+"\t"+"  "+"■           ■     ■ ■");
+		System.out.println("\t"+"\t"+"    "+"■          ■     ■ ■");
+		System.out.println("\t"+"\t"+"     "+"■         ■■■■■  ■");
+		System.out.println("\t"+"\t"+"     "+"■ ■ ■ ■ ■ ■ ■ ■ ■");
+		System.out.println("\t"+"\t"+"     "+"■ ■ ■      ■ ■ ■");
+		System.out.println("\t"+"\t"+"    "+"■ ■ ■      ■ ■ ■");
+		System.out.println("\t"+"\t"+"   "+"■ ■ ■      ■ ■ ■");
+		System.out.println();		
+		System.out.println("■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■");
+		
+	}
+	
+	void badcat(){
+		System.out.println();	
+		System.out.println("\t"+"\t"+"       "+"■      ■       ■  ■");
+		System.out.println("\t"+"\t"+"     "+"■ ■    ■ ■     ■ ■  ■ ■");
+		System.out.println("\t"+"\t"+"   "+"■    ■ ■   ■     ■ ■  ■ ■");
+		System.out.println("\t"+"\t"+"  "+"■           ■       ■  ■");
+		System.out.println("\t"+"\t"+"  "+"■ ■    ■■   ■    ");
+		System.out.println("\t"+"\t"+"  "+"■           ■     ");
+		System.out.println("\t"+"\t"+"    "+"■         ■    ");
+		System.out.println();	
+	}
+	
+	void goodcat(){
+		System.out.println();
+		System.out.println("\t"+"\t"+"       "+"■      ■       ");
+		System.out.println("\t"+"\t"+"     "+"■ ■    ■ ■     ■ ");
+		System.out.println("\t"+"\t"+"   "+"■    ■ ■    ■  ■ ■ ■  ");
+		System.out.println("\t"+"\t"+"  "+"■             ■  ■ ■ ");
+		System.out.println("\t"+"\t"+"  "+"■ ■■      ■■  ■   ");
+		System.out.println("\t"+"\t"+"  "+"■    ■■■      ■    ");
+		System.out.println("\t"+"\t"+"    "+"■         ■  " );
+		System.out.println();	
+	}
+	
 	public static void main(String[] args) {
 		
 		Scanner s = new Scanner(System.in);
-				
-/*		String Q1 = "캐릭터를 생성하시겠습니까?";
-		String Q1_1 = "[주의]님 동의??";
-				
-		System.out.println(Q1+"Y/N");
-		String answer = s.nextLine();
-
-		if(answer.equals("Y")||answer.equals("y")){
-			System.out.println(Q1_1+"Y/N");
-			answer = s.nextLine();
-			if(answer.equals("Y")||answer.equals("y")){*/
-		
+		System.out.println("당신은 고양이를 만났습니다.");				
+		System.out.println();
 		System.out.println("이름을 입력해주세요.");
-		String input = s.nextLine();
-		System.out.println(input);
-		
-		
+		String name = s.nextLine();
+		System.out.println("\t"+"아기고양이 이름 : "+name);
 		
 		maker mk = new maker();
+		
+		mk.babycat();
 		mk.state();
-		
-//		System.out.println(mk.coin());
-//		System.out.println();
-		
-		mk.disease();
-//		if(mk.coin().equals("뒷면")){
-//			mk.disease();
-//		}
-//		else if(mk.coin().equals("앞면")){
-//			mk.lucky();
-//				
-//		}
+				
+		for(int i = 0; i <  10; i++){
 			
-		
-		
-		
-
-		
-		String numbers[] = {"집가기","복습","복습","복습","복습","예습","복습","복습","복습","복습"};
-		
-		for(int i = 0; i < numbers.length * 10; i++){
-			int random = (int)(Math.random()*numbers.length);
-			
-			String temp = numbers[0];
-			numbers[0] = numbers[random];
-			numbers[random] = temp;
-			
-		}
-		
-		String night[] = {"자바 1장 연습문제", "자바 2장 연습문제", "자바 3장 연습문제", "자바 4장 연습문제","자바 5장 연습문제",
-							"Git 전반적인 응용"};
-		
-	
-		for(int i = 0; i < night.length * 10; i++){
-			int random2 = (int)(Math.random()*night.length);
-			
-			String temp = night[0];
-			night[0] = night[random2];
-			night[random2] = temp;
-			
-		}
-		
-		
-
-		
-		for(int i = 0; i < numbers.length;i++){
+			System.out.println();
+			System.out.println();
+			System.out.println("______________________메뉴_______________________");
+			System.out.print("1: 먹이주기       ");
+			System.out.print("2: 놀아주기       ");
+			System.out.print("3: 병원가기       ");
+			System.out.print("4: 놓아주기       ");
+			System.out.print("5: 랜덤         ");
 					
 			
+			int sel = s.nextInt();
+			
+			if (sel==1){
+				mk.food();			
+				mk.babycat();
+				mk.state();
+			}
+			else if(sel==2){
+				mk.play();			
+				mk.babycat();
+				mk.state();
+			}
+			else if(sel==3){
+				mk.Str = 9;	
+				mk.babycat();
+				mk.state();
+			}
+			else if(sel==4){
+				System.out.println();
+				System.out.println("\t"+"바이바이"+"\t"+name+"\t"+"~~~~~");
+				i=10;
+			}
+			else if(sel==5){
+				mk.coin();
+			}
+			
+			if(mk.Str<=0||mk.Int<=0){
+				System.out.println();
+				System.out.println("\t"+name+"는 눈앞이 깜깜해졌다.");
+				mk.gameover();;
+				mk.Str=0;
+				mk.Int=0;
+				i= 10;
+			}
+			else if(mk.Str==15||mk.Int==15){
+				System.out.println();
+				i= 10;
+				mk.adultcat();
+				mk.Str=15;
+				mk.Int=15;
+			}
+			
 		}
-		
-//		System.out.println(numbers[0]);
-//		System.out.println(night[0]);
-	
-	
-	
-		}	
-	
-	
-	
-	
 
-	
+	}	
+		
 }
