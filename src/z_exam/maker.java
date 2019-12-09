@@ -172,7 +172,9 @@ public class maker {
 		else if (coin[0].equals("놀아주기")){
 			play();
 		}
+		state();
 		return Int;
+		
 	}
 			
 	void gameover(){
