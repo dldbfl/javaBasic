@@ -1,18 +1,28 @@
 package z_exam_ch6;
 
 class Exercise6_19 {
-	
 		
-	public static void change(String str) {
-		str += "456";
+	String change(String str) {
+		
+//		str += "456";
+			return str = "456";
 	}
 
 	public static void main(String[] args) {
 
-		String str = "ABC123";
+		String str ="ABC123";
+//		change a = new change();
 		System.out.println(str);
-		change(str);
+
+		str = new Exercise6_19().change(str);
+	
 		
 		System.out.println("After change:" + str);
+		
+		str = new Exercise6_19().change(str);
 	}
 }
+
+
+
+

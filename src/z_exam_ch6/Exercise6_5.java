@@ -17,7 +17,7 @@ public class Exercise6_5 {
 	int eng;
 	int math;
 
-	public Student(String name, int ban, int no, int kor, int eng, int math) {
+	Student(String name, int ban, int no, int kor, int eng, int math) {
 		this.name = name;
 		this.ban= ban;
 		this.no = no;

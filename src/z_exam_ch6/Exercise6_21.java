@@ -1,4 +1,4 @@
-package Exercise6_21;
+package z_exam_ch6;
 
 	class MyTv {
 		boolean isPowerOn;

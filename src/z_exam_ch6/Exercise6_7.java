@@ -8,9 +8,9 @@ class MyPoint {
 		this.y = y;
 	}
 
-	double getDistance(int a, int b) {
+	double getDistance(int x, int y) {
 				
-		return (double) Math.sqrt((x-a)*(x-a) + (y-b)*(y-b));
+		return (double) Math.sqrt((x^2-this.x^2)+(y^2-this.y^2));
 		
 
 	}
