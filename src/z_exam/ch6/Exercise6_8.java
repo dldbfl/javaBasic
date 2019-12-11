@@ -1,5 +1,5 @@
 //6-8
-package z_exam_ch6;
+package z_exam.ch6;
 
 public class Exercise6_8 {
 	
