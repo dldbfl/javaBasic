@@ -76,6 +76,17 @@ public class Inheritance {
 //		t.setSecond(999);
 		t.setSecond(100000);
 		System.out.println(t);
+		
+		Singleton s = Singleton.getInstance();
+		
+		System.out.println(Singleton.getInstance());
+		System.out.println(Singleton.getInstance());
+		System.out.println(Singleton.getInstance());
+
+		System.out.println(new Inheritance()); // 싱글톤이 아니면 3번 다 다른 주소객체가나온다.
+		System.out.println(new Inheritance());
+		System.out.println(new Inheritance());
+	
 	}
 
 }

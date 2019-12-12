@@ -4,7 +4,7 @@ public class AccessModifier {
 	
 	public String		publicVar	 = "public : 접근제한이 없음";
 	protected String	protectedVar = "protected : 같은 패키지 , 그리고 상속받은 클래스에서 접근이 가능";
-	String				defaultVar	 = "default : 같은 패키에서만  접근이 가능";
+	String				defaultVar	 = "default : 같은 패키지에서만  접근이 가능";
 	private String		privateVar	 = "private : 클래스 내에서만 접근이 가능";
 
 	public void publicMethod(){
