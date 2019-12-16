@@ -18,7 +18,7 @@ public class OOP {
 		 * - 객체는 생성될때 마다 새로운 객체가 생성되고, 여러개의 객체가 동시에 존재할 수 있다.
 	 	 */
 		
-		
+			new SampleClass().method1(); // 객체생성없이 사용할떄 쓰는것
 			SampleClass sc = new SampleClass();
 		
 			sc.method1();

@@ -151,6 +151,7 @@ class MyTv2 {
 	final int MAX_CHANNEL = 100;
 	final int MIN_CHANNEL = 1;
 
+	
 	public void setPowerOn(boolean isPowerOn) {
 		this.isPowerOn = isPowerOn;
 	}
@@ -161,7 +162,7 @@ class MyTv2 {
 
 	public void setChannel(int channel) {
 		if(channel > MAX_CHANNEL || channel < MIN_CHANNEL) return;
-		prevCh = this.channel;
+		李典 = this.channel;
 		this.channel = channel;
 		
 
@@ -176,15 +177,15 @@ class MyTv2 {
 		this.volume = volume;
 	} 		
 	
-	private int prevCh; // 이전채널 변수를 만든다음에 이전채널에 그 변수 안에 집어넣어놓고
+	private int 李典; // 이전채널 변수를 만든다음에 이전채널에 그 변수 안에 집어넣어놓고
 
 	public void gotoPrevChannel(){
-		setChannel(prevCh);  // 그 변수에 해당하는 숫자를 보낸다.
+		setChannel(李典);  // 그 변수에 해당하는 숫자를 보낸다.
 	}
 		
 }
 
-class exam07_1 {
+class exam07 {
 	public static void main(String args[]) {
 		MyTv2 t = new MyTv2();
 		t.setChannel(10);
@@ -308,32 +309,32 @@ class exam07_1 {
 		
 //		[7-20] 다음의 코드를 실행한 결과를 적으시오.
 		
-	class exam07 {
-		public static void main(String[] args) {
-			Parent p = new Child();
-			Child c = new Child();
-			System.out.println("p.x = " + p.x);
-			p.method();
-			System.out.println("c.x = " + c.x);
-			c.method();
-		}
-	}
+//	class exam07_1 {
+//		public static void main(String[] args) {
+//			Parent p = new Child();
+//			Child c = new Child();
+//			System.out.println("p.x = " + p.x);
+//			p.method();
+//			System.out.println("c.x = " + c.x);
+//			c.method();
+//		}
+//	}
 	
-	class Parent {
-		int x = 100;
-	
-		void method() {
-			System.out.println("Parent Method");
-		}
-	}
-	
-	class Child extends Parent {
-		int x = 200;
-	
-		void method() {
-			System.out.println("Child Method");
-		}
-	}
+//	class Parent {
+//		int x = 100;
+//	
+//		void method() {
+//			System.out.println("Parent Method");
+//		}
+//	}
+//	
+//	class Child extends Parent {
+//		int x = 200;
+//	
+//		void method() {
+//			System.out.println("Child Method");
+//		}
+//	}
 		
 	
 		/*	p.x = 100

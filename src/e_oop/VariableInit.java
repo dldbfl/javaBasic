@@ -6,12 +6,16 @@ public class VariableInit {
 	//명시적 초기화
 	int var = 10;
 	
+	static int classVar = 20;
 	//초기화 블럭: 여러 문장이 필요한 초기화를 해야할 떄 사용한다.
 	{
 		for(int i= 1; i<= 10; i++){
 			var += i;
 		}
 			
+	}
+	static{
+		int classVar = 30;
 	}
 	
 	
