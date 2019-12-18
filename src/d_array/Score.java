@@ -41,19 +41,16 @@ public class Score {
 		
 		
 
-		for(int i = 0; i<Transcript.length;i++){
-				
-			
-			for(int j = 0; j<Transcript[i].length;j++){
-					Transcript[i][j] = (int)(Math.random()*90+10);	
-					sum[i] = sum[i] + Transcript[i][j];
-																		
-			}
-			
-			Transcript[i][6]= sum[i];
-			avg[i]=(int)(sum[i]*10+0.5)/Transcript[i].length/10.0;
-		}	
+		for (int i = 0; i < Transcript.length; i++) {
 
+			for (int j = 0; j < Transcript[i].length; j++) {
+				Transcript[i][j] = (int) (Math.random() * 90 + 10);
+				sum[i] = sum[i] + Transcript[i][j];
+			}
+
+			Transcript[i][6] = sum[i];
+			avg[i] = (int) (sum[i] * 10 + 0.5) / Transcript[i].length / 10.0;
+		}
 			
 		
 			
@@ -71,7 +68,7 @@ public class Score {
 
 				}
 			}
-		}	
+		}
 		
 		
 		
@@ -111,23 +108,23 @@ public class Score {
 			
 		}
 		
-		int sub[][] = new int [7][21];
-		int lastsum[]= new int[Transcript.length];
-		double[] lastavg = new double[Transcript.length]; //평균
-		
-		System.out.print("\t"+"과목별평균"+"\t");
-		for(int j = 0; j<sub.length;j++){	
-			for(int i = 0; i<Transcript.length;i++){
-				lastsum[j]= lastsum[j] + Transcript[i][j];
-				
-		
-
-			lastavg[j]=(int)(lastsum[j]*10+0.5)/sub[j].length/10.0;
-			
-												
-			}
-			System.out.print(lastavg[j]+"\t");
-		}	
+//		int sub[][] = new int [7][21];
+//		int lastsum[]= new int[Transcript.length];
+//		double[] lastavg = new double[Transcript.length]; //평균
+//		
+//		System.out.print("\t"+"과목별평균"+"\t");
+//		for(int j = 0; j<sub.length;j++){	
+//			for(int i = 0; i<Transcript.length;i++){
+//				lastsum[j]= lastsum[j] + Transcript[i][j];
+//				
+//		
+//
+//			lastavg[j]=(int)(lastsum[j]*10+0.5)/sub[j].length/10.0;
+//			
+//												
+//			}
+//			System.out.print(lastavg[j]+"\t");
+//		}	
 		
 	}
 

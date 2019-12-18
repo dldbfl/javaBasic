@@ -46,6 +46,7 @@ public class StringClass {
 		System.out.println(str.toUpperCase());
 		System.out.println(str.toUpperCase().toLowerCase());
 		
+		
 		String str2 = " abc abc ";
 		System.out.println(str2);
 		System.out.println(str2.trim());
