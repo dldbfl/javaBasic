@@ -28,7 +28,7 @@ class trainingOUTWALL {
     }//end of solution
 
     public static void main(String[] args) {
-    	System.out.println(weak);
+    	System.out.println();
 
 	}
   

@@ -66,13 +66,13 @@ public class exam4_2 {
 		
 		//이렇게 하면 for문이 적절할떄 끝나지않아요. 참고하세요.
 		for(int i = number.length()-1; i >= 0; i--){
-			newNumber = number.charAt(i) + newNumber;
+			NewNumber = number.charAt(i) + NewNumber;
 			count++;
 			if (count % 3 == 0 && count != number.length()){
-				newNumber = ","+newNumber;
+				NewNumber = ","+NewNumber;
 			}
 		}
-		System.out.println(newNumber);
+		System.out.println(NewNumber);
 		
 		
 		

@@ -110,9 +110,11 @@ public class ArrayListScore {
 				int sum = list5.get(0)+list5.get(1)+list5.get(2)+list5.get(3)+list5.get(4);
 				double avg = sum/list5.size();
 				
+				
 				for(int i = 0; i< list5.size();i++){
 					sum += list5.get(i);
 				}
+
 				
 				System.out.println(sum+","+avg);
 				

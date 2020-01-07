@@ -149,7 +149,6 @@ public class Variable {
 		test5 = test3;
 		test6 = test3;
 		test6 = test4;
-		test
 		
 		//수학에서 상수 - 코딩에서 리터럴
 		/*

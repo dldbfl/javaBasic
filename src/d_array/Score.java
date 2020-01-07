@@ -1,10 +1,5 @@
 package d_array;
 
-import java.util.Arrays;
-
-import javax.sql.rowset.spi.TransactionalWriter;
-
-import training.training1127;
 
 public class Score {
 	
